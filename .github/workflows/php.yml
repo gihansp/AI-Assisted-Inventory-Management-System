@@ -19,6 +19,7 @@ jobs:
     - name: Test Reporting
       uses: phoenix-actions/test-reporting@v10
       with:
-        name: Test Report
-        path: "tests/_output"
-        reporter: junit
+        artifact: test-results            # artifact name
+        name: Test Report                  # Name of the check run which will be created
+        path: '*.xml'                     # Path to test results (inside artifact .zip)
+        reporter: jest-junit  
