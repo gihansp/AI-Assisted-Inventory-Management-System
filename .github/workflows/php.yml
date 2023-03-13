@@ -18,3 +18,7 @@ jobs:
       run: composer install
     - name: Run tests 
       run: vendor/bin/phpunit tests/
+    - uses: checkity/upload@v1
+      with:
+       file-pattern: '**/jacoco.xml,**/lcov.info'
+       repo-token: ${{ secrets.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 }}
