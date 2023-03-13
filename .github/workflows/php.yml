@@ -16,3 +16,6 @@ jobs:
       run: composer install
     - name: Run tests
       run: vendor/bin/phpunit tests/
+    - name: Test Reporting
+      uses: phoenix-actions/test-reporting@v10
+
