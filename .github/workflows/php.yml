@@ -21,3 +21,4 @@ jobs:
       with:
         name: Test Report
         path: "tests/_output"
+        reporter: phpunit
