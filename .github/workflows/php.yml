@@ -20,3 +20,4 @@ jobs:
       uses: phoenix-actions/test-reporting@v10
       with:
         name: Test Report
+        path: "tests/_output"
