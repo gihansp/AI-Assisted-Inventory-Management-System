@@ -18,4 +18,5 @@ jobs:
       run: vendor/bin/phpunit tests/
     - name: Test Reporting
       uses: phoenix-actions/test-reporting@v10
-
+      with:
+        name: Test Report
