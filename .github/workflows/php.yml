@@ -16,10 +16,3 @@ jobs:
       run: composer install
     - name: Run tests
       run: vendor/bin/phpunit tests/
-    - name: Test Reporting
-      uses: phoenix-actions/test-reporting@v10
-      with:
-        artifact: test-results            # artifact name
-        name: Test Report                  # Name of the check run which will be created
-        path: '*.xml'                     # Path to test results (inside artifact .zip)
-        reporter: jest-junit  
