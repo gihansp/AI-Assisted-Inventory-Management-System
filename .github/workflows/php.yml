@@ -16,34 +16,4 @@ jobs:
       run: composer install
     - name: Run tests
       run: vendor/bin/phpunit tests/
-    - name: Generate HTML report
-      uses: actions/github-script@v4
-      with:
-        script: |
-          const fs = require('fs');
-
-          const results = fs.readFileSync('test-results.xml', 'utf8');
-
-          const parseString = require('xml2js').parseString;
-
-          parseString(results, function (err, result) {
-              let output = '<html><head><style>table,th,td{border:1px solid black;border-collapse:collapse;padding:5px;}</style></head><body>';
-
-              output += '<h1>Test Results</h1>';
-
-              output += '<table><tr><th>Test Suite</th><th>Test Case</th><th>Status</th></tr>';
-
-              for (const suite of result.testsuites.testsuite) {
-                  for (const testcase of suite.testcase) {
-                      const name = testcase.$.name;
-                      const classname = testcase.$.classname;
-                      const status = (testcase.failure ? 'Fail' : 'Pass');
-
-                      output += `<tr><td>${classname}</td><td>${name}</td><td>${status}</td></tr>`;
-                  }
-              }
-
-              output += '</table></body></html>';
-
-              console.log(output);
-          });
+ 
