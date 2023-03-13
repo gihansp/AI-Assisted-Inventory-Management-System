@@ -16,6 +16,8 @@ jobs:
       run: composer install
     - name: Run tests
       run: vendor/bin/phpunit tests/
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
- 
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+       token: ${{ secrets.e9803fe9-e0f6-48ae-88ad-9618374b12bd }}
