@@ -1,6 +1,8 @@
 name: PHP CI
 
-on: [push]
+on:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -17,8 +19,7 @@ jobs:
     - name: Run tests
       run: vendor/bin/phpunit tests/
            vendor/bin/phpunit --log-junit test-results.xml
-
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
-       token: ${{ secrets.e9803fe9-e0f6-48ae-88ad-9618374b12bd }}
+        token: ${{ secrets.CODECOV_TOKEN }}
