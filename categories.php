@@ -52,3 +52,33 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="editCatsModal" tabindex="-1" role="dialog" aria-labelledby="add-cat-modal-label">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="add-cat-modal-label">Edit Category</h4>
+
+                </div>
+                <form id="mdfy_cats_form" action="functions/category/edit-category.php" method="POST">
+                    <div class="modal-body">
+                        <div id="edit-categories-messages"></div>
+                        <div class="edit-cat-res">
+                            <div class="form-group">
+                                <label for="mdfy_cats_name">Categories Name</label>
+                                <input type="text" class="form-control" id="mdfy_cats_name" name="mdfy_cats_name" placeholder="Categories Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer edit-cat-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                        <button type="submit" class="btn btn-success" id="mdfy_cats_btn">Add</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
