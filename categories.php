@@ -82,3 +82,31 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="del_cats_modal" tabindex="-1" role="dialog" aria-labelledby="del_cats_modalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="del_cats_modalLabel">Remove Category</h4>
+                </div>
+                <div class="modal-body">
+                Are you sure to delete this? This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                    <button type="button" class="btn btn-primary" id="del_cats_btn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    </div>
+    <script src="assets/js/categories.js"></script>
+
+<?php require_once 'includes/footer.php'; ?>
