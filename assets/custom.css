@@ -1,0 +1,108 @@
+
+div.card {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.dt-buttons {
+    margin-bottom: 10px;
+}
+
+div.cardHeader {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+}
+
+div.cardContainer {
+    padding: 10px;
+}
+
+
+.div-hide {
+    display: none;
+}
+
+.kv-file-zoom {
+    display: none;
+}
+
+div.kv-avatar div.file-input div.file-preview {
+    width: 200px;
+}
+
+/*login form*/
+.vertical {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.alert {
+    border-radius: 0 !important;
+}
+
+
+
+.label-rounded {
+    border-radius: 100px;
+    padding: 5px 10px;
+}
+
+.panel {
+    border-radius: 0;
+}
+
+/* Load Saira font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Saira&display=swap');
+
+/* Set the default font family to Saira */
+body {
+    font-family: 'Saira', sans-serif;
+}
+
+
+
+.heading {
+    font-size: 36px; /* Adjust the font size to your desired size */
+}
+
+
+.pb {
+    padding-bottom: 16px;
+    margin-top: 16px;
+}
+
+/* CSS styles for full-page modal */
+.modal-fullpage {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+.modal-fullpage .modal-dialog modal-fullpage modal-fullpage {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-fullpage .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+.custom-modal-header {
+    border-bottom: none;
+}
+
+
+
+
+.h6 {
+    font-family: "Saira", sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+    color: inherit;
+}
