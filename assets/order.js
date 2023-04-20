@@ -1,4 +1,3 @@
-// Input 0
 var manage_ord_tbl;
 $(document).ready(function() {
 	var a = $(".div-request").text();

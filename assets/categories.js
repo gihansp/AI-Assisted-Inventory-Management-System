@@ -1,4 +1,3 @@
-// Input 0
 var manage_cats_tbl;
 $(document).ready(function() {
 	$("#nav_cats").addClass("active");
