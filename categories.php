@@ -1,5 +1,7 @@
 <?php require_once 'includes/header.php'; ?>
-<div class="row">
+
+
+    <div class="row">
         <div class="col-md-12">
 
             <!-- DataTables CSS -->
@@ -25,6 +27,9 @@
         </div>
     </div>
 
+
+
+    <!-- add categories -->
     <div class="modal fade" id="add-cat-modal" tabindex="-1" role="dialog" aria-labelledby="add-cat-modal-label">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -83,6 +88,18 @@
         </div>
     </div>
 
+
+
+
+    <!-- /add categories -->
+
+
+    <!-- edit categories brand -->
+
+
+    <!-- /categories brand -->
+
+    <!-- categories brand -->
     <div class="modal fade" id="del_cats_modal" tabindex="-1" role="dialog" aria-labelledby="del_cats_modalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -93,17 +110,18 @@
                     <h4 class="modal-title" id="del_cats_modalLabel">Remove Category</h4>
                 </div>
                 <div class="modal-body">
-                Are you sure to delete this? This action cannot be undone.
+                    Confirm removal? This action cannot be undone.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
                     <button type="button" class="btn btn-primary" id="del_cats_btn">Add</button>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
+    <!-- /categories brand -->
 
     </div>
     </div>

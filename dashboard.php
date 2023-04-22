@@ -93,8 +93,7 @@
     </div>
 
     <br>
-
-<div class="row">
+            <div class="row">
 
 
                 <div class="col-lg-4">
@@ -192,5 +191,6 @@
         </div>
 
 </div>
-    
-            <?php require_once 'includes/footer.php'; ?>
+
+
+<?php require_once 'includes/footer.php'; ?>
