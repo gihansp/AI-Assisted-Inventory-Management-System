@@ -1,27 +1,70 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
-require_once '../session-check.php';
+class CategoryTest extends TestCase
+{
+    public function testCategoryById()
+    {
+        // Mock database connection
+        $connect = $this->getMockBuilder(\mysqli::class)
+            ->setMethods(['prepare', 'bind_param', 'execute', 'get_result', 'close'])
+            ->getMock();
 
-$response = [];
+        $query = $this->getMockBuilder(\mysqli_stmt::class)
+            ->setMethods(['bind_param', 'execute', 'get_result', 'close'])
+            ->getMock();
 
-if (isset($_POST['categoriesId'])) {
-    $categoriesId = $_POST['categoriesId'];
+        $result = $this->getMockBuilder(\mysqli_result::class)
+            ->setMethods(['num_rows', 'fetch_assoc'])
+            ->getMock();
 
-    $query = $connect->prepare("SELECT cat_id, cat_name, cat_status FROM categories WHERE cat_id = ?");
-    $query->bind_param("i", $categoriesId);
-    $query->execute();
+        $connect->expects($this->once())
+            ->method('prepare')
+            ->with($this->equalTo('SELECT cat_id, cat_name, cat_status FROM categories WHERE cat_id = ?'))
+            ->willReturn($query);
 
-    $result = $query->get_result();
+        $query->expects($this->once())
+            ->method('bind_param')
+            ->with($this->equalTo('i'), $this->equalTo(1));
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $response = $row;
-    } else {
-        $response = ['error' => 'Category not found.'];
+        $query->expects($this->once())
+            ->method('execute');
+
+        $query->expects($this->once())
+            ->method('get_result')
+            ->willReturn($result);
+
+        $result->expects($this->once())
+            ->method('num_rows')
+            ->willReturn(1);
+
+        $result->expects($this->once())
+            ->method('fetch_assoc')
+            ->willReturn([
+                'cat_id' => 1,
+                'cat_name' => 'TestCategory',
+                'cat_status' => 'active'
+            ]);
+
+        $query->expects($this->once())
+            ->method('close');
+
+        $connect->expects($this->once())
+            ->method('close');
+
+        // Set up POST data
+        $_POST['categoriesId'] = 1;
+
+        ob_start();
+        require_once '../session-check.php';
+        $output = ob_get_clean();
+
+        // Assert the expected JSON response
+        $expected = json_encode([
+            'cat_id' => 1,
+            'cat_name' => 'TestCategory',
+            'cat_status' => 'active'
+        ]);
+        $this->assertEquals($expected, $output);
     }
-
-    $query->close();
-    $connect->close();
-
-    echo json_encode($response);
 }
