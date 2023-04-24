@@ -76,6 +76,10 @@
             <?php if(isset($_SESSION['userId']) && $_SESSION['userId']==1) { ?>
                 <li id="navReport"><a href="report.php"><i class="glyphicon glyphicon-stats"></i> Report</a></li>
             <?php } ?>
+            <?php if(isset($_SESSION['userId']) && $_SESSION['userId']==1) { ?>
+                <li id="navReport"><a href="backup.php"><i class="glyphicon glyphicon-hdd"></i> Backup</a></li>
+            <?php } ?>
+
         </ul>
 
         <ul class="nav navbar-nav navbar-right navbar-user">
