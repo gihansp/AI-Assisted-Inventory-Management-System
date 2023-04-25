@@ -80,4 +80,6 @@ class ProductTest extends TestCase
     public function tearDown(): void
     {
         $this->connection->query("DROP TABLE product");
-        $this->
+        $this->connection->close();
+    }
+}
