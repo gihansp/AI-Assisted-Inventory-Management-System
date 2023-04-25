@@ -51,3 +51,4 @@ $stmt->close();
 $connect->close();
 
 echo json_encode(array('data' => $data));
+
