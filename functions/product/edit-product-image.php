@@ -19,21 +19,21 @@ try {
 
                     if ($connect->query($sql) === true) {
                         $response['isSuccessful'] = true;
-                        $response['updateFeedback'] = 'Product image successfully updated.';
+                        $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Product image successfully updated.";
                     } else {
-                        throw new Exception('Error occurred while updating the product image. Please try again later.');
+                        throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while updating the product image. Please try again later.");
                     }
                 } else {
-                    throw new Exception('Error occurred while moving the uploaded file. Please try again later.');
+                    throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while moving the uploaded file. Please try again later.");
                 }
             } else {
-                throw new Exception('No file uploaded. Please upload a file.');
+                throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> No file uploaded. Please upload a file.");
             }
         } else {
-            throw new Exception('Invalid file type. Only specific file types are allowed.');
+            throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Invalid file type. Only specific file types are allowed.");
         }
     } else {
-        throw new Exception('Product ID or edited product image is empty. Please provide the required information.');
+        throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Product ID or edited product image is empty. Please provide the required information.");
     }
 } catch (Exception $e) {
     $response['isSuccessful'] = false;

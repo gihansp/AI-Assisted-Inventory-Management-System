@@ -14,10 +14,10 @@ try {
 
         if($connect->query($sql) === TRUE) {
             $response['isSuccessful'] = true;
-            $response['updateFeedback'] = "User information updated successfully.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok-sign'></span> User information updated successfully.";
         } else {
             $response['isSuccessful'] = false;
-            $response['updateFeedback'] = "Error occurred while updating user information. Please try again later.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-remove-sign'></span> Error occurred while updating user information. Please try again later.";
         }
     }
 } catch (Exception $e) {

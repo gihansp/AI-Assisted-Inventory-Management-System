@@ -45,7 +45,7 @@ function editCats(a) {
 					}}));
 				return !1;
 			});
-		}})) : alert("Oops!! Refresh the page");
+		}})) : alert("We encountered an error. Please refresh the page and try again.");
 }
 function removeCats(a) {
 	a = void 0 === a ? null : a;

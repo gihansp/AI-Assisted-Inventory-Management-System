@@ -13,10 +13,10 @@ if (isset($_POST['categoriesId'])) {
 
     if ($stmt->execute()) {
         $response['isSuccessful'] = true;
-        $response['updateFeedback'] = "Category successfully removed.";
+        $response['updateFeedback'] = '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Category created successfully.';
     } else {
         $response['isSuccessful'] = false;
-        $response['updateFeedback'] = "Error occurred while removing the category. Please try again later.";
+        $response['updateFeedback'] = '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Error occurred while removing the category. Please try again later.';
     }
 
     $stmt->close();

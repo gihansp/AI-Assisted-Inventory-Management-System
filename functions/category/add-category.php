@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($stmt->execute()) {
                 $response['isSuccessful'] = true;
-                $response['updateFeedback'] = 'Category created successfully.';
+                $response['updateFeedback'] = '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Category created successfully.';
             } else {
-                throw new Exception('Error occurred while creating the category. Please try again later.');
+                throw new Exception('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Error occurred while creating the category. Please try again later.');
             }
 
             $stmt->close();

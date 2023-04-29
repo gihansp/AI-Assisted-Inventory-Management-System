@@ -16,10 +16,10 @@ if (isset($_POST['orderId'])) {
 
     if ($stmt1->execute() && $stmt2->execute()) {
         $response['isSuccessful'] = true;
-        $response['updateFeedback'] = "The order has been successfully removed from our system.";
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> The order has been successfully removed from our system.";
     } else {
         $response['isSuccessful'] = false;
-        $response['updateFeedback'] = "Oops! Something went wrong while removing your order. Please try again later.";
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-exclamation-sign'></span> Oops! Something went wrong while removing your order. Please try again later.";
     }
 
     $stmt1->close();

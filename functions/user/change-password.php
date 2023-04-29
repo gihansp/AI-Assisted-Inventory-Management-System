@@ -27,22 +27,22 @@ if ($_POST) {
 
                 if ($updateStmt->execute()) {
                     $response['isSuccessful'] = true;
-                    $response['updateFeedback'] = "Password updated successfully.";
+                    $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Password updated successfully.";
                 } else {
                     $response['isSuccessful'] = false;
-                    $response['updateFeedback'] = "Error occurred while updating the password. Please try again later.";
+                    $response['updateFeedback'] = "<span class='glyphicon glyphicon-remove'></span> Error occurred while updating the password. Please try again later.";
                 }
             } else {
                 $response['isSuccessful'] = false;
-                $response['updateFeedback'] = "The new password and confirm password do not match. Please ensure both passwords are identical.";
+                $response['updateFeedback'] = "<span class='glyphicon glyphicon-warning-sign'></span> The new password and confirm password do not match. Please ensure both passwords are identical.";
             }
         } else {
             $response['isSuccessful'] = false;
-            $response['updateFeedback'] = "Incorrect current password. Please provide the correct current password.";
+            $response['updateFeedback'] = '<span class="glyphicon glyphicon-exclamation-sign"></span> Incorrect current password. Please provide the correct current password.';
         }
     } else {
         $response['isSuccessful'] = false;
-        $response['updateFeedback'] = "User not found. Please check the provided user information.";
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-exclamation-sign'></span> User not found. Please check the provided user information.";
     }
 
     $stmt->close();

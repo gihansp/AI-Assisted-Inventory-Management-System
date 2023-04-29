@@ -55,7 +55,7 @@ if ($_POST) {
     $transactionItemsStatus = ($count > 0);
 
     $response['isSuccessful'] = true;
-    $response['updateFeedback'] = "Your order has been successfully placed.";
+    $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Your order has been successfully placed.";
 
     $connect->close();
 

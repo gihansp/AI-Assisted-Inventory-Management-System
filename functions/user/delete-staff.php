@@ -13,15 +13,15 @@ if (isset($_POST['userid'])) {
 
     if ($stmt->execute()) {
         $response['isSuccessful'] = true;
-        $response['updateFeedback'][] = "User successfully removed.";
+        $response['updateFeedback'][] = "<span class='glyphicon glyphicon-ok-sign'></span> User successfully removed.";
     } else {
-        $response['updateFeedback'][] = "Error occurred while removing the user. Please try again later.";
+        $response['updateFeedback'][] = "<span class='glyphicon glyphicon-warning-sign'></span> Error occurred while removing the user. Please try again later.";
     }
 
     $stmt->close();
     $connect->close();
 } else {
-    $response['updateFeedback'][] = "User ID is missing. Please provide a valid user ID.";
+    $response['updateFeedback'][] = "<span class='glyphicon glyphicon-exclamation-sign'></span> User ID is missing. Please provide a valid user ID.";
 }
 
 echo json_encode($response);

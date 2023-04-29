@@ -14,16 +14,16 @@ if ($_POST) {
 
     try {
         if (!$prod_nm || !$productQuantity || !$rate || !$cat_nm || !$prod_status) {
-            throw new Exception('Incomplete product information. Please provide all required details.');
+            throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Incomplete product information. Please provide all required details.");
         }
 
         $sql = "UPDATE product SET product_name = '$prod_nm', cat_id = '$cat_nm', product_quantity = '$productQuantity', rate = '$rate', active = '$prod_status', status = 1 WHERE product_id = $prod_id";
 
         if ($connect->query($sql) === TRUE) {
             $response['isSuccessful'] = true;
-            $response['updateFeedback'] = "Product information successfully updated.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Product information successfully updated.";
         } else {
-            throw new Exception('Error occurred while updating product information. Please try again later.');
+            throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while updating product information. Please try again later.");
         }
     } catch (Exception $e) {
         $response['isSuccessful'] = false;

@@ -17,9 +17,9 @@ try {
 
             if ($stmt->execute()) {
                 $response['isSuccessful'] = true;
-                $response['updateFeedback'] = 'The categories were updated successfully.';
+                $response['updateFeedback'] = '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> The categories were updated successfully.';
             } else {
-                $response['updateFeedback'] = 'An error occurred while updating the categories. Please try again later.';
+                $response['updateFeedback'] = '<span class="glyphicon glyphicon-alert" aria-hidden="true"></span> An error occurred while updating the categories. Please try again later.';
             }
 
             $stmt->close();

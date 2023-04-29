@@ -1,6 +1,6 @@
 <?php
 // Connect to the database
-$dsn = "mysql:host=localhost;dbname=store";
+$dsn = "mysql:host=localhost;dbname=phoenix";
 $username = "root";
 $password = "root";
 $options = array(

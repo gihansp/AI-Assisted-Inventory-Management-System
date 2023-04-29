@@ -9,7 +9,7 @@
 
 
                 <div class="panel-body">
-                    <form class="form-horizontal" action="functions/order/get-order-report.php" method="post" id="get_ord_report_form">
+                    <form class="form-horizontal" action="functions/order/order-report.php" method="post" id="get_ord_report_form">
                         <div class="form-group">
                             <label for="startDate" class="col-sm-1 control-label">From:</label>
                             <div class="col-sm-11">

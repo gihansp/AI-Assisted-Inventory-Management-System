@@ -17,16 +17,16 @@ if(isset($_POST['userName'], $_POST['upassword'], $_POST['uemail'])) {
 
         if($stmt->execute()) {
             $response['isSuccessful'] = true;
-            $response['updateFeedback'] = "Member added successfully.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Member added successfully.";
         } else {
             $response['isSuccessful'] = false;
-            $response['updateFeedback'] = "Error occurred while adding the member. Please try again later.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while adding the member. Please try again later.";
         }
         $stmt->close();
 
     } catch (Exception $e) {
         $response['isSuccessful'] = false;
-        $response['updateFeedback'] = "Error occurred while adding the member:  " . $e->getMessage();
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while adding the member: " . $e->getMessage();
     }
 }
 

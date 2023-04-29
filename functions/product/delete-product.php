@@ -12,10 +12,10 @@ if (isset($_POST['prod_id'])) {
 
     if ($stmt->execute()) {
         $response['isSuccessful'] = true;
-        $response['updateFeedback'] = "Product successfully removed.";
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> Product successfully removed.";
     } else {
         $response['isSuccessful'] = false;
-        $response['updateFeedback'] = "Error occurred while removing the product. Please try again later.";
+        $response['updateFeedback'] = "<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while removing the product. Please try again later.";
     }
 
     $stmt->close();

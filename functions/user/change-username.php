@@ -16,9 +16,9 @@ if (isset($_POST['username'], $_POST['user_id'])) {
 
         if ($stmt->execute()) {
             $response['isSuccessful'] = true;
-            $response['updateFeedback'] = "User information updated successfully.";
+            $response['updateFeedback'] = "<span class='glyphicon glyphicon-ok'></span> User information updated successfully.";
         } else {
-            throw new Exception("Error occurred while updating user information. Please try again later.");
+            throw new Exception("<span class='glyphicon glyphicon-exclamation-sign'></span> Error occurred while updating user information. Please try again later.");
         }
 
         $stmt->close();

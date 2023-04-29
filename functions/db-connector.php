@@ -3,7 +3,7 @@
 $localhost = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "store";
+$dbname = "phoenix";
 $port = 3306;
 
 // db connection
