@@ -136,6 +136,6 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/user.js"></script>
+    <script src="https://closure-compiler.appspot.com/code/jsc3c0a61f6f9c7c7f20c5d03f2f01fcdb6/default.js"></script>
 
 <?php require_once 'includes/footer.php'; ?>
