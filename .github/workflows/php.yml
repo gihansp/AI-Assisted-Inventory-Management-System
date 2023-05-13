@@ -1,4 +1,4 @@
-name: PHP CI
+name: PHP SmartFlow
 
 on:
   push:
