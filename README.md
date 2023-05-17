@@ -23,4 +23,4 @@ Before you begin, make sure you have the following installed on your system:
 
 4. Import the database schema and seed data (if available) into your MySQL database.
 
-5. Open your web browser and navigate to http://localhost/project-name to access the project.
+5. Open your web browser and navigate to http://localhost/ to access the project.
