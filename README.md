@@ -21,6 +21,12 @@ Before you begin, make sure you have the following installed on your system:
 
 3. Create a new MySQL database named phoenix for the project.
 
-4. Import the database schema and seed data (if available) into your MySQL database.
+4. Import the database schema and seed data (phoenix.sql) into your MySQL database.
 
 5. Open your web browser and navigate to http://localhost/ to access the project.
+
+### Model with Python Installation (AI part)
+
+6. Download the  whole AI part folder including weights file and the cfg file for the AI model and place them in the appropriate location within the project.
+
+7. Run the Python file project.py to start adding items to the AI-assisted inventory management system.
